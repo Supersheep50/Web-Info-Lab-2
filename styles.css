@@ -1,5 +1,5 @@
 html, body {
-  background-color: lightblue;
+  
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -8,6 +8,32 @@ html, body {
   height: 100vh;
 }
 
+h1 {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 200%;
+  margin: 0;
+  margin-left: 30px;
+}
+
+.home-page {
+  background-color: lightblue
+}
+
+.humidity-page {
+  background-color: lightgrey;
+}
+
+.temperature-page {
+  background-color: lightyellow;
+}
+
+.uv-page {
+  background-color: lightgreen;
+}
+
+.wind-page {
+  background-color: lightpink;
+}
 
 .nav-bar {
   color: #1f1f1f;
@@ -106,4 +132,3 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
-s
