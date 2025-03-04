@@ -13,6 +13,7 @@ h1 {
   font-size: 200%;
   margin: 0;
   margin-left: 30px;
+  margin-bottom: 15px;
 }
 
 .home-page {
@@ -124,11 +125,18 @@ input:checked + .slider:before {
   transform: translateX(26px);
 }
 
-/* Rounded sliders */
+
 .slider.round {
   border-radius: 34px;
 }
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+#search-box {
+  margin-top: 50px;
+  width: 100px;
+  height: 100px;
+  
 }
