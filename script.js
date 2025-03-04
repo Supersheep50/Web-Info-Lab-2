@@ -13,6 +13,8 @@ async function updateData(cityName) {
     const weather = await getData(cityName);
     if (!weather) return;
 
+    
+
     if (document.getElementById("temperature")) {
         document.getElementById("temperature").innerText = `The current temperature in ${cityName} is ${weather.temperatureCelsius}°C`;
     }
@@ -25,8 +27,48 @@ async function updateData(cityName) {
     if (document.getElementById("windspeed")) {
         document.getElementById("windspeed").innerText = `The current windspeed in ${cityName} is ${weather.windSpeed} kmph`;
     }
-}
+    let tempIcon = document.getElementById("temperature-icon");
+    if (tempIcon) {
+        if (weather.temperatureCelsius > 20) {
+            tempIcon.style.color = "orange"; 
+        } else {
+            tempIcon.style.color = "blue"; 
+        }
+    }
 
+    let humidityIcon = document.getElementById("humidity-icon");
+    if (humidityIcon) {
+        if (weather.humidity > 0.7) {
+            humidityIcon.style.color = "blue"; 
+        } else if (weather.humidity > 0.4) {
+            humidityIcon.style.color = "yellow";
+        } else {
+            humidityIcon.style.color = "green"; 
+        }
+    }
+
+
+    let uvIcon = document.getElementById("uv-icon");
+    if (uvIcon) {
+        if (weather.uvIndex > 6) {
+            uvIcon.style.color = "red";
+        } else if (weather.uvIndex > 3) {
+            uvIcon.style.color = "orange"; 
+        } else {
+            uvIcon.style.color = "green"; 
+        }
+    }
+
+    
+    let windIcon = document.getElementById("wind-icon");
+    if (windIcon) {
+        if (weather.windSpeed > 20) {
+            windIcon.style.color = "red"; 
+        } else {
+            windIcon.style.color = "blue";
+        }
+    }
+}
 
 document.addEventListener("DOMContentLoaded", () => {
     const cityName = localStorage.getItem("selectedCity") || "Dublin"; 
@@ -43,3 +85,5 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
+
+
