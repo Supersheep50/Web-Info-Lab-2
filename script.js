@@ -13,8 +13,6 @@ async function updateData(cityName) {
     const weather = await getData(cityName);
     if (!weather) return;
 
-    
-
     if (document.getElementById("temperature")) {
         document.getElementById("temperature").innerText = `The current temperature in ${cityName} is ${weather.temperatureCelsius}°C`;
     }
@@ -47,7 +45,6 @@ async function updateData(cityName) {
         }
     }
 
-
     let uvIcon = document.getElementById("uv-icon");
     if (uvIcon) {
         if (weather.uvIndex > 6) {
@@ -59,7 +56,6 @@ async function updateData(cityName) {
         }
     }
 
-    
     let windIcon = document.getElementById("wind-icon");
     if (windIcon) {
         if (weather.windSpeed > 20) {
