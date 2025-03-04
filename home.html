@@ -7,8 +7,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   
   <link rel="stylesheet" href="/styles.css">
-  <script src="/scripts.js"></script>
   
+
   <title>Weather App</title>
 </head>
 <body class="home-page">
@@ -19,28 +19,27 @@
   <div>
   <nav class="nav-bar">
     <ul class="nav-links">
-
-      <li><a href="/pages/humidity.html">Humidity</a></li>
-      <li><a href="/pages/temperature.html">Temperature</a></li>
-      <li><a href="/pages/uv.html">UV Index</a></li>
-      <li><a href="/pages/wind.html">Wind Speed</a></li>
+      <li><a id="humidity-link" href="/pages/humidity.html">Humidity</a></li>
+      <li><a id="temperature-link" href="/pages/temperature.html">Temperature</a></li>
+      <li><a id="uv-link" href="/pages/uv.html">UV Index</a></li>
+      <li><a id="wind-link" href="/pages/wind.html">Wind Speed</a></li>
       <li><a href="/home.html">Home</a></li>
-
-    </ul>
+  </ul>
+  
+  
 
   </nav>
   </div>
 </header>
 
 <div>
-  <form action="/action_page.php">
-    <input type="text" id="city" name="city"><br><br>
-    <label for="city">City:</label>
-    <input id ="cityName" type="submit" value="Submit">
-    <button id="cityName" type="submit">Submit</button>
-  </form>
+  <form id="weatherForm">
+    <input type="text" id="cityInput" placeholder="Enter city">
+    <button type="submit" id="searchButton">Search</button>
+</form>
+
 </div>
 
-
+<script src="/script.js"></script>
 </body>
 </html>

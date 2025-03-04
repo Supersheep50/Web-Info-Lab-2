@@ -6,6 +6,8 @@
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="/styles.css">
+
+
   <title>Weather App</title>
 </head>
 <body class="wind-page">
@@ -17,26 +19,25 @@
   </a>
   <nav class="nav-bar">
     <ul class="nav-links">
-
-
-      <li><a href="/pages/humidity.html">Humidity</a></li>
-      <li><a href="/pages/temperature.html">Temperature</a></li>
-      <li><a href="/pages/uv.html">UV Index</a></li>
-      <li><a href="/pages/wind.html">Wind Speed</a></li>
+      <li><a id="humidity-link" href="/pages/humidity.html">Humidity</a></li>
+      <li><a id="temperature-link" href="/pages/temperature.html">Temperature</a></li>
+      <li><a id="uv-link" href="/pages/uv.html">UV Index</a></li>
+      <li><a id="wind-link" href="/pages/wind.html">Wind Speed</a></li>
       <li><a href="/home.html">Home</a></li>
-
-    </ul>
+  </ul>
+  
+  
   </nav>
 </header>
 
 <div>
-  <p id = "wind"> The Wind Speed is currently: </p>
-  <p>kmph</p>
+  <p id = "windspeed"> The Wind Speed is currently: </p>
+ 
   <p>
   
       <img src="/images/wind-direction.png" alt="Wind Speed">
 </p>
 </div>
-
+<script src="/script.js"></script>
 </body>
 </html>
