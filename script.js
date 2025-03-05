@@ -23,7 +23,7 @@ async function updateData(cityName) {
         document.getElementById("uvIndex").innerText = `The current UV Index in ${cityName} is ${weather.uvIndex}`;
     }
     if (document.getElementById("windspeed")) {
-        document.getElementById("windspeed").innerText = `The current windspeed in ${cityName} is ${weather.windSpeed} kmph`;
+        document.getElementById("windspeed").innerText = `The current windspeed in ${cityName} is ${weather.windSpeed}`;
     }
     let tempIcon = document.getElementById("temperature-icon");
     if (tempIcon) {
@@ -77,6 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const cityInput = document.getElementById("cityInput").value.trim();
             if (cityInput) {
                 updateData(cityInput);
+                window.location.href = "./pages/wind.html";
             }
         });
     }

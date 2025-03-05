@@ -136,7 +136,13 @@ input:checked + .slider:before {
 
 #search-box {
   margin-top: 50px;
-  width: 100px;
+  width: 200px;
   height: 100px;
   
+}
+
+.citInput {
+  width: 100%;
+  height: 30px;
+  margin-bottom: 10px;
 }
