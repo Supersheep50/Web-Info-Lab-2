@@ -14,8 +14,9 @@ async function updateData(cityName) {
     if (!weather) return;
 
     if (document.getElementById("temperature")) {
-        document.getElementById("temperature").innerText = `The current temperature in ${cityName} is ${weather.temperatureCelsius}°C`;
-    }
+        document.getElementById("temperature").innerText = `The current temperature in ${cityName} is: `;
+        updateTemperatureDisplay(weather.temperatureCelsius); 
+            }
     if (document.getElementById("humidity")) {
         document.getElementById("humidity").innerText = `The current humidity in ${cityName} is ${weather.humidity * 100}%`;
     }
@@ -82,5 +83,28 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
+
+function updateTemperatureDisplay(temperatureCelcius){
+    const toggleSwitch = document.getElementById('temp-toggle');
+    const unitElement = document.getElementById('unit');
+    const temperatureValue = document.getElementById('temperature-value');
+    
+    if(toggleSwitch.checked){
+
+        const farenheitTemp = (temperatureCelcius * 9/5) + 32;
+        temperatureValue.textContent = farenheitTemp.toFixed(2);
+        unitElement.textContent = 'Farenheit';
+
+    }else {
+        temperatureValue.textContent = temperatureCelcius.toFixed(2);
+        unitElement.textContent = 'Celcius';
+    }
+    
+}
+
+document.getElementById('temp-toggle').addEventListener('change', () => {
+    const cityName = localStorage.getItem("selectedCity") || "Dublin";
+    updateData(cityName);
+} );  
 
 

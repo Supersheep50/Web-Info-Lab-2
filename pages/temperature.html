@@ -41,17 +41,19 @@
 <div>
   <br>
   <p id = "temperature" class ="fw-bold fs-4 d-inline me-2"> The Temperature is currently: </p>
+  <span class ="fw-bold fs-4 d-inline me-2" id ="temperature-value"></span>
   <p class="d-inline">
     <i id="temperature-icon" class="fas fa-thermometer-half fs-1"></i>
+   
 </p>
 <br>
 <br>
   <label class="switch">
-    <input type="checkbox">
+    <input type="checkbox" id="temp-toggle">
     <span class="slider"></span> 
     
   </label>
-  <h5>Celcius/ Fahrenheit</h5>  
+  <h5><span id="unit">Celsius</span></h5>  
 </div>
 
 <script src="/script.js"></script>
